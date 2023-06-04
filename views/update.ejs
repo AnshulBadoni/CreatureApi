@@ -1,0 +1,26 @@
+<%- include("partials/header"); -%>
+<h1>Update the Character</h1>
+<p>Only Input those fields you want to update</p>
+<br>
+<form id="updateform">
+    <div class="form-group">
+             
+        <label>ID</label>
+        <input type="text"  class="form-control" name="Pid" id="">
+            <label>First Name</label>
+            <input type="text"  class="form-control" name="Pfname" id="">
+            <label>Last Name</label>
+            <input type="text"  class="form-control" name="Plname" id="">
+            <label>Date of Birth</label>
+            <input type="date" class="form-control" name="Pdob" id="">
+            <label>Father's Name</label>
+            <input type="text" class="form-control" name="Pfather" id="">
+            <label>Mother's Name</label>
+            <input type="text" class="form-control" name="Pmother" id="">
+            <label>Your Image</label>
+            <input type="file" class="form-control" name="Pimg" id="">
+    </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+</form>
+<%- include("partials/footer"); -%>
+        

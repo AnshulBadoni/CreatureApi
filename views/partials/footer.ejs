@@ -1,0 +1,47 @@
+</div>
+<div class="footer-padding"></div>
+<div class="footer">
+  <p>Made with ❤️ by Anshul Badoni</p>
+</div>
+</div>
+
+<script>
+const form = document.getElementById('dform');
+
+form.addEventListener('submit',(event)=> {
+  event.preventDefault();
+
+  const relationID = form.elements.relationID.value;
+  const xhr = new XMLHttpRequest();
+  
+  xhr.open('DELETE', "http://localhost:5000/relation/"+relationID);
+  xhr.onload = function () {
+      if (xhr.status === 200) {
+        // redirect to a success page
+        window.location.href = "/dsuccess";
+      } else {
+        // handle the error
+        window.location.href = "/error";
+
+      }
+    };
+  xhr.send();
+
+});
+  
+  // const form = document.getElementById('updateform');
+
+  // form.addEventListener('submit', function (event) {
+  //   event.preventDefault();
+
+  //   const data = new FormData(form);
+  //   const xhr = new XMLHttpRequest();
+
+  //   xhr.open('PATCH', 'http://localhost:5000/relation/${dpid}/update');
+  //   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  //   xhr.send(data);
+  // });
+</script>
+</body>
+
+</html>
